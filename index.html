@@ -1,62 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>P O R T F O I L O</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="icon" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio, Digi Ani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div id="loader-wrapper">
-    <div class="loader"></div>
-  </div>
-  <style>
-    @keyframes rotation {
-      0% {
-        transform: rotate(0deg); }
-      100% {
-        transform: rotate(360deg); } }
-    #loader-wrapper {
-      background-color: #FFFFFF;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      width: 100%;
-      height: 100%;
-      text-align: center; }
-    .loader {
-      width: 40px;
-      height: 40px;
-      border: 5px solid #000000;
-      border-bottom-color: transparent;
-      border-radius: 50%;
-      margin-top:calc(50vh - 20px);
-      display: inline-block;
-      box-sizing: border-box;
-      -webkit-animation: rotation 1s linear infinite;
-      animation: rotation 1s linear infinite; }
-  </style>
-  <header>
-    <h1>WORK IN PROGRESS/h1>
-  </header>
-  <nav></nav>
-  <main>
-    <section></section>
-    <section></section>
-    <section></section>
-  </main>
-  <footer></footer>
-  <!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: lightgray;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]-->
-  <script src="https://code.jquery.com/jquery-3.7.1
-.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(window).on('load', function() {
-      $("#loader-wrapper").fadeOut(700);
-    });
-  </script>
-  <script src="app.js"></script>
+<body class="text-black leading-snug antialiased">
+    <script src="app.js"></script>
+  
+    <div class="mx-auto min-h-screen grid lg:grid-cols-4">
+
+        <!-- Sidebar / Navigation (Fixed on Desktop, Full-width Header on Mobile) -->
+        <header class="lg:sticky lg:top-0 lg:h-screen lg:col-span-1 border-r border-black graphic-border lg:flex lg:flex-col p-6 bg-white z-10 shadow-lg lg:shadow-none">
+            <div class="flex flex-col h-full">
+
+                <!-- Title & Lang Switcher -->
+                <div class="flex justify-between items-center mb-10 lg:mb-12">
+                    <h1 class="text-2xl font-extrabold tracking-tight">
+                        <span class="lang-en">EMIRI PIU</span>
+                        <span class="lang-jp">恵美里・ピウ</span>
+                    </h1>
+                    <button id="lang-toggle" onclick="toggleLanguage()" class="text-sm font-semibold tracking-widest p-2 hover:bg-black hover:text-white transition-colors duration-200 sharp border-2 border-black">
+                        EN / <span class="color-red">JP</span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links (Hidden on mobile, uses smooth scroll) -->
+                <nav class="hidden lg:block space-y-2 flex-grow">
+                    <a href="#about" class="block text-2xl font-bold py-2 px-3 color-red border-4 border-transparent hover:border-red hover:bg-black hover:text-white transition-all duration-300 sharp">
+                        <span class="lang-en">01. PROFILE</span>
+                        <span class="lang-jp">01. プロフィール</span>
+                    </a>
+                    <a href="#work" class="block text-2xl font-bold py-2 px-3 color-blue border-4 border-transparent hover:border-blue hover:bg-black hover:text-white transition-all duration-300 sharp">
+                        <span class="lang-en">02. WORK REELS</span>
+                        <span class="lang-jp">02. 作品</span>
+                    </a>
+                    <a href="#contact" class="block text-2xl font-bold py-2 px-3 border-4 border-transparent hover:border-black hover:bg-black hover:text-white transition-all duration-300 sharp">
+                        <span class="lang-en">03. CONTACT</span>
+                        <span class="lang-jp">03. 連絡先</span>
+                    </a>
+                </nav>
+
+                <!-- Footer/Signature -->
+                <footer class="mt-auto pt-8 text-xs text-gray-600 hidden lg:block">
+                    <span class="lang-en">&copy; 2025 EMIRI PIU. All Rights Reserved.</span>
+                    <span class="lang-jp">&copy; 2025 恵美里・ピウ. 無断複写・転載を禁じます。</span>
+                </footer>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="lg:col-span-3">
+
+            <!-- 01. Profile / About Section -->
+            <section id="about" class="min-h-[80vh] flex flex-col justify-center p-8 lg:p-16 border-b border-black graphic-border">
+                <p class="text-xs font-semibold uppercase mb-4 color-red">
+                    <span class="lang-en">SECTION 01</span>
+                    <span class="lang-jp">セクション 01</span>
+                </p>
+
+                <h2 class="text-5xl lg:text-7xl font-extrabold mb-8 tracking-tighter">
+                    <span class="lang-en">I Can't Think of a <span class="color-red">Title</span>.</span>
+                    <span class="lang-jp">タイトルが思いつか<span class="color-red">ない</span>。</span>
+                </h2>
+
+                <div class="max-w-2xl text-xl space-y-6">
+                    <p class="lang-en">
+                        I am an aspiring animator. working my butt of in hopes of becoming an industry LO/Genga Animator.
+                    </p>
+                    <p class="lang-en">
+                        I have worked in both traditional and digital pipelines, Personaly perfering digital. I have strencth in dynamic action shot with flowing pose and complex persepective. my strencth also lay in compostiting: guiding the veiwers eyes, and making eye candy
+                    </p>
+                    <p class="lang-jp text-2xl font-medium">
+                        私はアニメーターを目指しています。業界のLO/原画アニメーターになることを夢見て一生懸命働いています。
+                    </p>
+                    <p class="lang-jp text-2xl font-medium">
+                        従来型とデジタルの両方の制作プロセスで経験を積んできました。個人的にはデジタル作業を好んでいます。流れるようなポーズと複雑な遠近法を用いたダイナミックなアクションショットを得意としています。また構図にも強みがあり、視聴者の視線を誘導し、目を奪うような映像作りを心がけています。
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- 02. Work Reels Section -->
+            <section id="work" class="p-8 lg:p-16 border-b border-black graphic-border">
+                <p class="text-xs font-semibold uppercase mb-4 color-blue">
+                    <span class="lang-en">SECTION 02</span>
+                    <span class="lang-jp">セクション 02</span>
+                </p>
+                <h2 class="text-4xl lg:text-6xl font-extrabold mb-12 tracking-tighter">
+                    <span class="lang-en">Selected <span class="color-blue">Reels</span>.</span>
+                    <span class="lang-jp">厳選された<span class="color-blue">作品</span>。</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Work Item 1 -->
+                    <div class="border-4 border-black sharp overflow-hidden">
+                        <div class="aspect-video bg-black flex items-center justify-center">
+                            <div class="text-white text-lg p-10 text-center border-4 border-blue w-full h-full flex flex-col justify-center items-center">
+                                <span class="text-2xl font-bold">REEL 2025</span>
+                                <span class="text-base mt-2 color-blue">
+                                    <span class="lang-en">Work + Personal animations</span>
+                                    <span class="lang-jp">仕事用＋個人用アニメーション</span>
+                                </span>
+                                <img src="https://placehold.co/600x338/007bff/ffffff?text=Video+Placeholder" alt="Video Placeholder 1" class="mt-4 opacity-50">
+                            </div>
+                        </div>
+                        <div class="p-4 border-t-4 border-black bg-white">
+                            <h3 class="text-xl font-bold color-blue">End 2025 Reel</h3>
+                            <p class="text-sm mt-1">
+                                <span class="lang-en">2025 highlights in my animation project/work</span>
+                                <span class="lang-jp">2025年における私のアニメーションプロジェクト／作品のハイライト</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Work Item 2 -->
+                    <div class="border-4 border-black sharp overflow-hidden">
+                        <div class="aspect-video bg-black flex items-center justify-center">
+                            <!-- Placeholder for Video Embed (e.g., YouTube/Vimeo iframe) -->
+                            <div class="text-white text-lg p-10 text-center border-4 border-red w-full h-full flex flex-col justify-center items-center">
+                                <span class="text-2xl font-bold">HIGHLIGHT PROJECT</span>
+                                <span class="text-base mt-2 color-red">
+                                    <span class="lang-en">My best work</span>
+                                    <span class="lang-jp">私の最高傑作</span>
+                                </span>
+                                <iframe src="https://www.youtube.com/embed/zuZ5AWZtjuE" class="mt-4"></iframe>
+                            </div>
+                        </div>
+                        <div class="p-4 border-t-4 border-black bg-white">
+                            <h3 class="text-xl font-bold color-red">Boat Animation</h3>
+                            <p class="text-sm mt-1">
+                                <span class="lang-en">Role: Final. Focus: Subtle boat motion and pretty compostiting.</span>
+                                <span class="lang-jp">役割：最終段階。焦点：微妙なボートの動きと美しい合成。</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 03. Contact Section -->
+            <section id="contact" class="p-8 lg:p-16">
+                <p class="text-xs font-semibold uppercase mb-4">
+                    <span class="lang-en">SECTION 03</span>
+                    <span class="lang-jp">セクション 03</span>
+                </p>
+                <h2 class="text-4xl lg:text-6xl font-extrabold mb-12 tracking-tighter">
+                    <span class="lang-en">Contact <span class="color-blue">me</span>.</span>
+                    <span class="lang-jp"><span class="color-blue">連絡</span>をどうぞ。</span>
+                </h2>
+
+                <div class="max-w-xl">
+                    <p class="text-lg mb-6">
+                        <span class="lang-en">Working towards geting freelance Genga work, commissions, and studio contracts. Soon I promise though ;3</span>
+                        <span class="lang-jp">フリーランスの原画仕事、依頼、スタジオ契約を目指しています。でも、もうすぐ必ず実現させますからね ;3</span>
+                    </p>
+
+                    <div class="space-y-4">
+                        <a href="mailto:EMIRI.BAQIRSAQ@GMAIL.COM" class="block text-2xl font-bold p-4 sharp border-4 border-black bg-black text-white hover:bg-blue hover:border-blue hover-graphic transition-all duration-300">
+                            <span class="lang-en">EMAIL: EMIRI.BAQIRSAQ@GMAIL.COM</span>
+                            <span class="lang-jp">Eメール: EMIRI.BAQIRSAQ@GMAIL.COM</span>
+                        </a>
+                        <a href="https://twitter.com/digi_ani" target="_blank" class="block text-2xl font-bold p-4 sharp border-4 border-black text-black hover:border-red hover-graphic transition-all duration-300">
+                            <span class="lang-en">TWITTER: @DIGI_ANI</span>
+                            <span class="lang-jp">X (ツイッター): @DIGI_ANI</span>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="lg:hidden p-8 text-center text-xs text-gray-600 border-t border-black graphic-border mt-10">
+                <span class="lang-en">&copy; 2025 Emiri Piu. All Rights Reserved.</span>
+                <span class="lang-jp">&copy; 2025 恵美里・ピウ. 無断複写・転載を禁じます。</span>
+            </footer>
+        </main>
+    </div>
+
 </body>
 </html>
